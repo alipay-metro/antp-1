@@ -1,0 +1,97 @@
+@topBottomBg: #08172F;
+@fontColor: #fff;
+@primaryColor: #FE5F46;
+@darkFontColor: #999;
+@MiddleFontColor: #666;
+@lineColr: #3D414D;
+@tableColor: #F0F1F5;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*头部logo和导航*/
+#header {
+  width: 100%;
+  height: 64px;
+  background-color: @topBottomBg;
+}
+
+.logo {
+  display: inline-block;
+  margin: 15px 0 0 40px;
+}
+
+.header-nav {
+  float: right;
+  font-size: 14px;
+  height: 64px;
+  margin-right: 40px;
+
+  > a {
+    color: @fontColor;
+    line-height: 64px;
+    margin-left: 63px;
+
+    &.active {
+      color: @primaryColor;
+    }
+
+    &:hover {
+      color: tint(@primaryColor, 20%);
+    }
+
+    &.active {
+      color: shabe(@primaryColor, 65%);
+    }
+  }
+}
+
+/*页脚*/
+#footer {
+  width: 100%;
+  height: 206px;
+  padding-top: 44px;
+  background-color: @topBottomBg;
+}
+
+.footer {
+  width: 1040px;
+  margin: 0 auto;
+
+  > div {
+    width: 230px;
+    margin-left: 40px;
+    float: left;
+
+    &:first-child {
+      margin-left: 0;
+    }
+    > p {
+      color: @fontColor;
+      line-height: 30px;
+      font-size: 16px;
+
+      &:last-child {
+        font-size: 14px;
+      }
+    }
+    > a {
+      color: @darkFontColor;
+      line-height: 30px;
+      display: inline-block;
+      font-size: 14px;
+      &:hover {
+        color: tint(@darkFontColor, 20%);
+      }
+      &:active {
+        color: shabe(@darkFontColor, 5%);
+      }
+    }
+  }
+}

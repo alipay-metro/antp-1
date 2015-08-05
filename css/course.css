@@ -1,34 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-a {
-  text-decoration: none;
-}
-/*头部logo和导航*/
-#header {
-  width: 100%;
-  height: 64px;
-  background-color: #08172f;
-}
-.logo {
-  display: inline-block;
-  margin: 15px 0 0 40px;
-}
-.header-nav {
-  float: right;
-  font-size: 14px;
-  height: 64px;
-  margin-right: 40px;
-}
-.header-nav > a {
-  color: #ffffff;
-  line-height: 64px;
-  margin-left: 63px;
-}
-.header-nav > a.active {
-  color: #fe5f46;
-}
 /*主体部分*/
 /*课程分类导航*/
 #main {
@@ -108,6 +77,12 @@ a {
   text-align: center;
   line-height: 100%;
   outline: none;
+}
+.apply-btn:hover {
+  background-color: #fe7f6b;
+}
+.apply-btn.active {
+  background-color: shabe(#fe5f46, 65%);
 }
 .nums {
   margin-top: 38px;
@@ -322,36 +297,9 @@ td {
   line-height: 100%;
   outline: none;
 }
-/*页脚*/
-#footer {
-  width: 100%;
-  height: 206px;
-  padding-top: 44px;
-  background-color: #08172f;
+.bottom-apply-btn:hover {
+  background-color: #fe7f6b;
 }
-.footer {
-  width: 1040px;
-  margin: 0 auto;
-}
-.footer > div {
-  width: 230px;
-  margin-left: 40px;
-  float: left;
-}
-.footer > div:first-child {
-  margin-left: 0;
-}
-.footer > div > p {
-  color: #ffffff;
-  line-height: 30px;
-  font-size: 16px;
-}
-.footer > div > p:last-child {
-  font-size: 14px;
-}
-.footer > div > a {
-  color: #999999;
-  line-height: 30px;
-  display: inline-block;
-  font-size: 14px;
+.bottom-apply-btn.active {
+  background-color: shabe(#fe5f46, 65%);
 }

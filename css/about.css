@@ -1,0 +1,27 @@
+.left-bar {
+  width: 255px;
+  float: left;
+  background-color: pink;
+}
+.left-bar > h2 {
+  color: #666666;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.5;
+  margin-top: 40px;
+  margin-left: 50px;
+}
+.left-bar > div {
+  color: #666666;
+  width: 165px;
+  padding-left: 90px;
+  height: 48px;
+  font-size: 14px;
+  line-height: 1.5;
+  line-height: 48px;
+}
+.right-bar {
+  width: 100%;
+  margin-left: 255px;
+  background-color: skyblue;
+}
