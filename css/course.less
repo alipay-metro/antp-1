@@ -1,51 +1,68 @@
-* {
+@topBottomBg: #08172F;
+@fontColor: #fff;
+@primaryColor: #FE5F46;
+@darkFontColor: #999;
+@MiddleFontColor: #666;
+@lineColr: #3D414D;
+@tableColor: #F0F1F5;
+
+*{
   margin: 0;
   padding: 0;
 }
-a {
+
+a{
   text-decoration: none;
 }
 /*头部logo和导航*/
 #header {
   width: 100%;
   height: 64px;
-  background-color: #08172f;
+  background-color: @topBottomBg;
 }
+
 .logo {
   display: inline-block;
   margin: 15px 0 0 40px;
 }
+
 .header-nav {
   float: right;
   font-size: 14px;
   height: 64px;
   margin-right: 40px;
+
+  > a {
+    color: @fontColor;
+    line-height: 64px;
+    margin-left: 63px;
+
+    &.active {
+      color: @primaryColor;
+    }
+  }
 }
-.header-nav > a {
-  color: #ffffff;
-  line-height: 64px;
-  margin-left: 63px;
-}
-.header-nav > a.active {
-  color: #fe5f46;
-}
+
 /*主体部分*/
 /*课程分类导航*/
 #main {
   width: 100%;
 }
+
 #nav {
   width: 432px;
   height: 70px;
   margin: 0 auto;
   position: relative;
 }
+
 .nav-link {
   width: 144px;
   float: left;
   background-color: pink;
   height: 100%;
 }
+
 .slide {
   /*height: 2px;*/
   /*width: 144px;*/
@@ -61,73 +78,82 @@ a {
   bottom: 0;
   box-sizing: border-box;
   height: 2px;
-  background-color: #fe5f46;
+  background-color: @primaryColor;
   transform: scaleX(1);
   transform-origin: 0 0;
 }
+
 .slide-transition-forward {
   transition: right 0.3s ease-in-out, left 0.3s ease-in-out 0.09s;
 }
+
 .slide--transition-backward {
   transition: right 0.3s ease-in-out 0.09s, left 0.3s ease-in-out;
 }
+
 /*大图*/
 #jumbotron {
   width: 100%;
   height: 395px;
   background-color: #F4F6F8;
 }
+
 .jumbotron {
   width: 980px;
   height: 395px;
   margin: 0 auto;
   position: relative;
+
+  > h2 {
+    font-size: 48px;
+    line-height: 48px;
+    font-weight: 300;
+    color: #5B5B5B;
+    display: inline-block;
+    margin-top: 57px;
+  }
+
+  > p {
+    font-size: 14px;
+    color: @darkFontColor;
+    margin-top: 20px;
+  }
 }
-.jumbotron > h2 {
-  font-size: 48px;
-  line-height: 48px;
-  font-weight: 300;
-  color: #5B5B5B;
-  display: inline-block;
-  margin-top: 57px;
-}
-.jumbotron > p {
-  font-size: 14px;
-  color: #999999;
-  margin-top: 20px;
-}
+
 .apply-btn {
   height: 40px;
   width: 102px;
   margin-top: 40px;
   font-size: 18px;
-  color: #ffffff;
+  color: @fontColor;
   border-radius: 21px;
-  background-color: #fe5f46;
+  background-color: @primaryColor;
   border: 1px solid #DD5D48;
   text-align: center;
   line-height: 100%;
   outline: none;
 }
+
 .nums {
   margin-top: 38px;
+  > div {
+    display: inline-block;
+    float: left;
+    color: @MiddleFontColor;
+    &:first-child {
+      margin-right: 104px;
+    }
+    > p {
+      font-size: 12px;
+      line-height: 1.6;
+      margin-top: 5px;
+      &:first-child {
+        font-size: 24px;
+      }
+    }
+  }
 }
-.nums > div {
-  display: inline-block;
-  float: left;
-  color: #666666;
-}
-.nums > div:first-child {
-  margin-right: 104px;
-}
-.nums > div > p {
-  font-size: 12px;
-  line-height: 1.6;
-  margin-top: 5px;
-}
-.nums > div > p:first-child {
-  font-size: 24px;
-}
+
 .banner {
   height: 375px;
   width: 589px;
@@ -135,59 +161,67 @@ a {
   top: 20px;
   right: 0;
 }
+
 /*课程简介*/
 #introduce {
   width: 100%;
   height: 136px;
 }
+
 .introduce {
   width: 980px;
   height: 100%;
   margin: 0 auto;
+  > div {
+    width: 220px;
+    height: 52px;
+    margin-left: 33px;
+    padding: 42px 0;
+    float: left;
+    position: relative;
+
+    &:first-child {
+      margin-left: 0;
+    }
+    > div {
+      margin-left: 46px;
+      > p {
+        font-size: 14px;
+        color: @darkFontColor;
+        margin-top: 8px;
+        line-height: 22px;
+        font-weight: 100;
+
+        &:first-child {
+          font-size: 18px;
+          color: @MiddleFontColor;
+          line-height: 22px;
+          margin: 0;
+        }
+      }
+    }
+  }
 }
-.introduce > div {
-  width: 220px;
-  height: 52px;
-  margin-left: 33px;
-  padding: 42px 0;
-  float: left;
-  position: relative;
-}
-.introduce > div:first-child {
-  margin-left: 0;
-}
-.introduce > div > div {
-  margin-left: 46px;
-}
-.introduce > div > div > p {
-  font-size: 14px;
-  color: #999999;
-  margin-top: 8px;
-  line-height: 22px;
-  font-weight: 100;
-}
-.introduce > div > div > p:first-child {
-  font-size: 18px;
-  color: #666666;
-  line-height: 22px;
-  margin: 0;
-}
+
 .icon {
   width: 34px;
   height: 34px;
   position: absolute;
   top: 51px;
+
+  &.bmyq {
+    width: 26px;
+    height: 38px;
+    top: 49px;
+  }
+
+  &.pdbz {
+    width: 27px;
+    height: 32px;
+    top: 52px;
+  }
 }
-.icon.bmyq {
-  width: 26px;
-  height: 38px;
-  top: 49px;
-}
-.icon.pdbz {
-  width: 27px;
-  height: 32px;
-  top: 52px;
-}
+
 hr {
   border: none;
   background-color: #979797;
@@ -195,93 +229,109 @@ hr {
   opacity: 0.27;
   margin: 0;
 }
+
 /*课程安排*/
 .plan-title {
   font-size: 24px;
   line-height: 24px;
   text-align: center;
-  color: #666666;
+  color: @MiddleFontColor;
   margin: 82px 0 40px 0;
+  span {
+    color: @primaryColor;
+  }
 }
-.plan-title span {
-  color: #fe5f46;
-}
+
 table {
   border-collapse: separate;
   width: 978px;
   margin: 0 auto;
   border-radius: 4px;
-  border: 1px solid #f0f1f5;
+  border: 1px solid @tableColor;
   text-align: center;
   overflow: hidden;
 }
+
 tr {
   height: 48px;
-  color: #666666;
+  color: @MiddleFontColor;
   font-size: 12px;
   line-height: 48px;
+
+  &:nth-of-type(odd) {
+    background-color: @tableColor;
+  }
+
+  &:first-child {
+    background-color: #727580;
+    color: @fontColor;
+    font-size: 14px;
+    line-height: 48px;
+    font-weight: 100;
+  }
 }
-tr:nth-of-type(odd) {
-  background-color: #f0f1f5;
-}
-tr:first-child {
-  background-color: #727580;
-  color: #ffffff;
-  font-size: 14px;
-  line-height: 48px;
-  font-weight: 100;
-}
+
 th,
 td {
   width: 122px;
 }
+
 /*导师简介*/
 .teacher {
   width: 980px;
   height: 257px;
   margin: 0 auto;
+  > div {
+    width: 280px;
+    height: 100%;
+    float: left;
+    margin-left: 70px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
 }
-.teacher > div {
-  width: 280px;
-  height: 100%;
-  float: left;
-  margin-left: 70px;
-}
-.teacher > div:first-child {
-  margin-left: 0;
-}
+
 .avatar {
   width: 280px;
   height: 186px;
 }
-.teacher-name {
-  font-size: 14px;
-  color: #666666;
-  line-height: 18px;
-  margin-top: 20px;
-  text-align: center;
+
+.teacher {
+  &-name {
+    font-size: 14px;
+    color: @MiddleFontColor;
+    line-height: 18px;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  &-introduce {
+    font-size: 12px;
+    color: @darkFontColor;
+    line-height: 18px;
+    margin-top: 10px;
+    text-align: center;
+  }
 }
-.teacher-introduce {
-  font-size: 12px;
-  color: #999999;
-  line-height: 18px;
-  margin-top: 10px;
-  text-align: center;
-}
+
 /*图线*/
 .top-point {
   width: 0;
   height: 0;
   margin: 100px auto 0 auto;
-  border: 3px solid #3d414d;
+  border: 3px solid @lineColr;
   border-radius: 3px;
 }
+
 .gray-line {
   width: 2px;
   height: 67px;
   margin: 0 auto;
-  background-color: #3d414d;
+  background-color: @lineColr;
 }
+
 .white-line {
   width: 2px;
   height: 21px;
@@ -289,8 +339,9 @@ td {
   top: 0;
   left: 50%;
   margin-left: -1px;
-  background-color: #ffffff;
+  background-color: @fontColor;
 }
+
 .bottom-point {
   width: 0;
   height: 0;
@@ -298,60 +349,67 @@ td {
   top: 21px;
   left: 50%;
   margin-left: -3px;
-  border: 3px solid #ffffff;
+  border: 3px solid @fontColor;
   border-radius: 3px;
 }
+
 .bottom-btn {
   width: 100%;
   height: 131px;
   padding-top: 27px;
   position: relative;
-  background-color: #fe5f46;
+  background-color: @primaryColor;
 }
+
 .bottom-apply-btn {
   height: 42px;
   width: 122px;
   display: block;
   margin: 30px auto 0 auto;
   font-size: 18px;
-  color: #ffffff;
+  color: @fontColor;
   border-radius: 22px;
-  background-color: #fe5f46;
-  border: 1px solid #ffffff;
+  background-color: @primaryColor;
+  border: 1px solid @fontColor;
   text-align: center;
   line-height: 100%;
   outline: none;
 }
+
 /*页脚*/
 #footer {
   width: 100%;
   height: 206px;
   padding-top: 44px;
-  background-color: #08172f;
+  background-color: @topBottomBg;
 }
+
 .footer {
   width: 1040px;
   margin: 0 auto;
-}
-.footer > div {
-  width: 230px;
-  margin-left: 40px;
-  float: left;
-}
-.footer > div:first-child {
-  margin-left: 0;
-}
-.footer > div > p {
-  color: #ffffff;
-  line-height: 30px;
-  font-size: 16px;
-}
-.footer > div > p:last-child {
-  font-size: 14px;
-}
-.footer > div > a {
-  color: #999999;
-  line-height: 30px;
-  display: inline-block;
-  font-size: 14px;
+
+  > div {
+    width: 230px;
+    margin-left: 40px;
+    float: left;
+
+    &:first-child {
+      margin-left: 0;
+    }
+    > p {
+      color: @fontColor;
+      line-height: 30px;
+      font-size: 16px;
+
+      &:last-child {
+        font-size: 14px;
+      }
+    }
+    > a {
+      color: @darkFontColor;
+      line-height: 30px;
+      display: inline-block;
+      font-size: 14px;
+    }
+  }
 }

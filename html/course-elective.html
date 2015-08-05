@@ -4,19 +4,18 @@
   <meta charset="UTF-8">
   <title>前端技术学院</title>
   <!-- 引入样式 -->
-  <link rel="stylesheet" href="http://ant.design/dist/antd.css">
+  <!--<link rel="stylesheet" href="http://ant.design/dist/antd.css">-->
   <!-- 引入 react 和 antd.js -->
-  <script src="https://a.alipayobjects.com/??jquery/jquery/1.11.1/jquery.js,react/0.13.3/react.min.js,react/0.13.3/JSXTransformer.js"></script>
-  <script src="http://ant.design/dist/antd.js"></script>
+  <!--<script src="http://ant.design/dist/antd.js"></script>-->
+  <link rel="stylesheet" href="/css/normalize.css"/>
 
   <link rel="stylesheet" href="/css/course.css">
-  <script src="/js/course.jsx" type="text/jsx"></script>
 </head>
 <body>
 <!--头部logo和导航-->
 <div id="header">
   <a href="/" class="logo">
-    <img src="/img/logo.png" alt="ANTP"/>
+    <img src="/img/logo.svg" alt="ANTP"/>
   </a>
   <p class="header-nav">
     <a href="#">首页</a>
@@ -31,14 +30,19 @@
 <div id="main">
 
   <!--三类课程导航-->
-  <div id="nav" class="nav"></div>
+  <div id="nav">
+    <div class="nav-link"></div>
+    <div class="nav-link"></div>
+    <div class="nav-link"></div>
+    <div class="slide slide-transition-forward"></div>
+  </div>
 
   <!--巨幕-->
   <div id="jumbotron">
     <div class="jumbotron">
       <h2>选修课程系列</h2>
       <p>一个针对新手程序员定制的培训计划,来一次改变，就现在。</p>
-      <img src="/img/banner3.png" alt="ANTP" class="banner"/>
+      <img src="/img/xuanxiu-orange1.svg" alt="ANTP" class="banner"/>
       <button class="apply-btn">点击报名</button>
       <div class="nums">
         <div>
@@ -57,28 +61,28 @@
   <div id="introduce">
     <div class="introduce">
       <div>
-        <img class="icon" src="/img/icon1.png" alt="招生人群"/>
+        <img class="icon" src="/img/icon1.svg" alt="招生人群"/>
         <div>
           <p>招生人群</p>
           <p>所有在职java开发工程师</p>
         </div>
       </div>
       <div>
-        <img class="icon" src="/img/icon2.png" alt="培训目标"/>
+        <img class="icon" src="/img/icon2.svg" alt="培训目标"/>
         <div>
           <p>培训目标</p>
           <p>学员达到[人员能力评级]</p>
         </div>
       </div>
       <div>
-        <img class="icon bmyq" src="/img/icon3.png" alt="报名要求"/>
+        <img class="icon bmyq" src="/img/icon3.svg" alt="报名要求"/>
         <div>
           <p>报名要求</p>
           <p>满足基本要求即可</p>
         </div>
       </div>
       <div>
-        <img class="icon pdbz" src="/img/icon4.png" alt="评定标准"/>
+        <img class="icon pdbz" src="/img/icon4.svg" alt="评定标准"/>
         <div>
           <p>评定标准</p>
           <p>所有在职java开发工程师</p>
@@ -91,7 +95,7 @@
   <!--课程安排-->
   <p class="plan-title">课程信息 <span>/</span> Schedule</p>
 
-  <table class="plan">
+  <table>
     <tr>
       <th>第一节</th>
       <th>第二节</th>
@@ -103,34 +107,34 @@
       <th>第八节</th>
     </tr>
     <tr>
-      <td>January</td>
-      <td>$100</td>
-      <td>January</td>
-      <td>$100</td>
-      <td>January</td>
-      <td>$100</td>
-      <td>January</td>
-      <td>$100</td>
+      <td>Web开发概述—1小时</td>
+      <td>CSS基础</td>
+      <td>布局实战</td>
+      <td>javascript基础 上</td>
+      <td>javascript基础 下</td>
+      <td>jquery基础</td>
+      <td>前端工程</td>
+      <td>高级内容</td>
     </tr>
     <tr>
-      <td>January</td>
-      <td>$100</td>
-      <td>January</td>
-      <td>$100</td>
-      <td>January</td>
-      <td>$100</td>
-      <td>January</td>
-      <td>$100</td>
+      <td>Html基础入门 0.8小时</td>
+      <td>PS 量，切，吸</td>
+      <td>CSS最佳实践</td>
+      <td></td>
+      <td></td>
+      <td>DOM操作</td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
-      <td>January</td>
+      <td>DOM树 0.2小时</td>
       <td></td>
-      <td>January</td>
-      <td>$100</td>
       <td></td>
-      <td>$100</td>
       <td></td>
-      <td>$100</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
     </tr>
   </table>
 
@@ -164,7 +168,28 @@
   </div>
 </div>
 <div id="footer">
-  <div class="footer"></div>
+  <div class="footer">
+    <div>
+      <p>Gitlab 仓库</p>
+      <a href="#">脚手架 - Flaming Water</a>
+      <a href="#">组 件 - Flaming Cloud Component</a>
+    </div>
+    <div>
+      <p>关于我们</p>
+      <a href="#">博 客 - Ant UED</a>
+    </div>
+    <div>
+      <p>联系我们</p>
+      <a href="#">问题建议 - Issuse</a>
+    </div>
+    <div>
+      <p>&copy2015 体验技术部-企业平台组出品</p>
+    </div>
+  </div>
 </div>
+
+
+<script src="https://a.alipayobjects.com/??jquery/jquery/1.11.1/jquery.js"></script>
+<script src="/js/course.js"></script>
 </body>
 </html>
