@@ -2,7 +2,7 @@
 @fontColor: #fff;
 @primaryColor: #FE5F46;
 @darkFontColor: #999;
-@MiddleFontColor: #666;
+@middleFontColor: #666;
 @lineColr: #3D414D;
 @tableColor: #F0F1F5;
 
@@ -22,36 +22,287 @@
 .nav-link {
   width: 144px;
   float: left;
-  background-color: pink;
-  height: 100%;
+  height: 70px;
+  text-align: center;
+
+  > a, > span {
+    width: 144px;
+    height: 70px;
+    display: inline-block;
+    color: @darkFontColor;
+    line-height: 70px;
+
+    &:hover {
+      color: tint(@primaryColor, 20%);
+    }
+
+    &:active {
+      color: shade(@primaryColor, 5%);
+    }
+  }
+}
+
+.dropdown {
+  width: 112px;
+  height: 102px;
+  background-color: @fontColor;
+  position: absolute;
+  top: 75px;
+  right: 15px;
+  z-index: 9999;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+
+  > a {
+    display: inline-block;
+    width: 104px;
+    height: 18px;
+    padding: 8px 0 8px 8px;
+    color: @middleFontColor;
+    font-size: 12px;
+    line-height: 1.5;
+    
+    &:hover {
+      background-color: tint(@primaryColor, 60%);
+    }
+
+    &:first-child {
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+    }
+
+    &:last-child {
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+    }
+  }
+
+  &.open {
+    opacity: 1;
+    height: 102px;
+    transition: all .3s ease-in-out;
+  }
+
+  &.close {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    transition: all .3s ease-in-out;
+  }
+}
+
+@keyframes keyFrame12 {
+  0% {
+    left: 0;
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(1.5);
+  }
+  100% {
+    left: 144px;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes keyFrame13 {
+  0% {
+    left: 0;
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(2);
+  }
+  100% {
+    left: 288px;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes keyFrame23 {
+  0% {
+    left: 144px;
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(1.5);
+  }
+  100% {
+    left: 288px;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes keyFrame21 {
+  0% {
+    left: 144px;
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(1.5);
+  }
+  100% {
+    left: 0;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes keyFrame32 {
+  0% {
+    left: 288px;
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(1.5);
+  }
+  100% {
+    left: 144px;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes keyFrame31 {
+  0% {
+    left: 288px;
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(2);
+  }
+  100% {
+    left: 0;
+    transform: scaleX(1);
+  }
+}
+
+@-webkit-keyframes keyFrame12 {
+  0% {
+    left: 0;
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(1.5);
+  }
+  100% {
+    left: 144px;
+    transform: scaleX(1);
+  }
+}
+
+@-webkit-keyframes keyFrame13 {
+  0% {
+    left: 0;
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(2);
+  }
+  100% {
+    left: 288px;
+    transform: scaleX(1);
+  }
+}
+
+@-webkit-keyframes keyFrame23 {
+  0% {
+    left: 144px;
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(1.5);
+  }
+  100% {
+    left: 288px;
+    transform: scaleX(1);
+  }
+}
+
+@-webkit-keyframes keyFrame21 {
+  0% {
+    left: 144px;
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(1.5);
+  }
+  100% {
+    left: 0;
+    transform: scaleX(1);
+  }
+}
+
+@-webkit-keyframes keyFrame32 {
+  0% {
+    left: 288px;
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(1.5);
+  }
+  100% {
+    left: 144px;
+    transform: scaleX(1);
+  }
+}
+
+@-webkit-keyframes keyFrame31 {
+  0% {
+    left: 288px;
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(2);
+  }
+  100% {
+    left: 0;
+    transform: scaleX(1);
+  }
 }
 
 .slide {
-  /*height: 2px;*/
-  /*width: 144px;*/
-  /*position: absolute;*/
-  /*bottom: 0;*/
-  /*left: 10px;*/
-  /*background-color: @primaryColor;*/
-  /*transform: translateX(200%);*/
-  /*transition: transform .3s ease-in-out;*/
-  z-index: 1;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  box-sizing: border-box;
   height: 2px;
+  width: 144px;
+  position: absolute;
+  bottom: 0;
+  //left: 0;
   background-color: @primaryColor;
-  transform: scaleX(1);
-  transform-origin: 0 0;
-}
 
-.slide-transition-forward {
-  transition: right 0.3s ease-in-out, left 0.3s ease-in-out 0.09s;
-}
-
-.slide--transition-backward {
-  transition: right 0.3s ease-in-out 0.09s, left 0.3s ease-in-out;
+  &.move12 {
+    -webkit-animation: keyFrame12 .3s ease-out;
+    -webkit-animation-fill-mode: forwards;
+    animation: keyFrame12 .3s ease-out;
+    animation-fill-mode: forwards;
+  }
+  &.move13 {
+    -webkit-animation: keyFrame13 .3s ease-out;
+    -webkit-animation-fill-mode: forwards;
+    animation: keyFrame13 .3s ease-out;
+    animation-fill-mode: forwards;
+  }
+  &.move23 {
+    -webkit-animation: keyFrame23 .3s ease-out;
+    -webkit-animation-fill-mode: forwards;
+    animation: keyFrame23 .3s ease-out;
+    animation-fill-mode: forwards;
+  }
+  &.move21 {
+    -webkit-animation: keyFrame21 .3s ease-out;
+    -webkit-animation-fill-mode: forwards;
+    animation: keyFrame21 .3s ease-out;
+    animation-fill-mode: forwards;
+  }
+  &.move32 {
+    -webkit-animation: keyFrame32 .3s ease-out;
+    -webkit-animation-fill-mode: forwards;
+    animation: keyFrame32 .3s ease-out;
+    animation-fill-mode: forwards;
+  }
+  &.move31 {
+    -webkit-animation: keyFrame31 .3s ease-out;
+    -webkit-animation-fill-mode: forwards;
+    animation: keyFrame31 .3s ease-out;
+    animation-fill-mode: forwards;
+  }
 }
 
 /*大图*/
@@ -100,8 +351,8 @@
     background-color: tint(@primaryColor, 20%);
   }
 
-  &.active {
-    background-color: shabe(@primaryColor, 65%);
+  &:active {
+    background-color: shade(@primaryColor, 5%);
   }
 }
 
@@ -110,7 +361,7 @@
   > div {
     display: inline-block;
     float: left;
-    color: @MiddleFontColor;
+    color: @middleFontColor;
     &:first-child {
       margin-right: 104px;
     }
@@ -165,7 +416,7 @@
 
         &:first-child {
           font-size: 18px;
-          color: @MiddleFontColor;
+          color: @middleFontColor;
           line-height: 22px;
           margin: 0;
         }
@@ -206,7 +457,7 @@ hr {
   font-size: 24px;
   line-height: 24px;
   text-align: center;
-  color: @MiddleFontColor;
+  color: @middleFontColor;
   margin: 82px 0 40px 0;
   span {
     color: @primaryColor;
@@ -225,7 +476,7 @@ table {
 
 tr {
   height: 48px;
-  color: @MiddleFontColor;
+  color: @middleFontColor;
   font-size: 12px;
   line-height: 48px;
 
@@ -272,7 +523,7 @@ td {
 .teacher {
   &-name {
     font-size: 14px;
-    color: @MiddleFontColor;
+    color: @middleFontColor;
     line-height: 18px;
     margin-top: 20px;
     text-align: center;
@@ -350,7 +601,7 @@ td {
     background-color: tint(@primaryColor, 20%);
   }
 
-  &.active {
-    background-color: shabe(@primaryColor, 65%);
+  &:active {
+    background-color: shade(@primaryColor, 5%);
   }
 }

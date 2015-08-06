@@ -1,27 +1,68 @@
+#main {
+  width: 100%;
+  float: left;
+}
 .left-bar {
   width: 255px;
+  padding-bottom: 200px;
   float: left;
-  background-color: pink;
+  background-color: #F4F6F8;
 }
 .left-bar > h2 {
   color: #666666;
   font-weight: 300;
   font-size: 18px;
   line-height: 1.5;
-  margin-top: 40px;
-  margin-left: 50px;
+  margin: 40px 0 10px 50px;
 }
-.left-bar > div {
-  color: #666666;
-  width: 165px;
-  padding-left: 90px;
+.left-bar > p {
+  color: #999999;
+  width: 163px;
   height: 48px;
+  padding-left: 90px;
+  border-left: 2px solid #E0E6F0;
   font-size: 14px;
-  line-height: 1.5;
   line-height: 48px;
+  cursor: pointer;
+}
+.left-bar > p.active {
+  color: #666666;
+  background-color: #E0E6F0;
+  border-left: 2px solid #fe5f46;
+}
+.left-bar > p:hover:not(.active) {
+  color: #adadad;
+  background-color: #f0f3f8;
 }
 .right-bar {
-  width: 100%;
   margin-left: 255px;
-  background-color: skyblue;
+  padding: 63px 0 0 80px;
+}
+.right-bar > h1 {
+  font-size: 36px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: #555;
+  margin: 0 0 34px 0;
+}
+.right-bar > div {
+  margin-top: 50px;
+}
+.right-bar > div > h2 {
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 300;
+  color: #666666;
+}
+.right-bar > div > ul {
+  margin-top: 20px;
+}
+.right-bar > div > ul > li {
+  font-size: 14px;
+  line-height: 1.5;
+  list-style: inside disc;
+  color: #999999;
+}
+.right-bar > div:first-child {
+  margin-top: 0;
 }

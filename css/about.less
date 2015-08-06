@@ -2,45 +2,86 @@
 @fontColor: #fff;
 @primaryColor: #FE5F46;
 @darkFontColor: #999;
-@MiddleFontColor: #666;
+@middleFontColor: #666;
 @lineColr: #3D414D;
 @tableColor: #F0F1F5;
 
-#main{
-
+#main {
+  width: 100%;
+  float: left;
 }
 
-.left-bar{
+.left-bar {
   width: 255px;
+  padding-bottom: 200px;
   float: left;
-  background-color: pink;
+  background-color: #F4F6F8;
 
-  >h2{
-    color: @MiddleFontColor;
+  > h2 {
+    color: @middleFontColor;
     font-weight: 300;
     font-size: 18px;
     line-height: 1.5;
-    margin-top: 40px;
-    margin-left: 50px;
+    margin: 40px 0 10px 50px;
   }
 
-  >div{
-    color: @MiddleFontColor;
-    width: 165px;
-    padding-left: 90px;
+  > p {
+    color: @darkFontColor;
+    width: 163px;
     height: 48px;
+    padding-left: 90px;
+    border-left: 2px solid #E0E6F0;
     font-size: 14px;
-    line-height: 1.5;
     line-height: 48px;
+    cursor: pointer;
+
+    &.active {
+      color: @middleFontColor;
+      background-color: #E0E6F0;
+      border-left: 2px solid @primaryColor;
+    }
+    &:hover {
+      &:not(.active){
+        color: tint(@darkFontColor, 20%);
+        background-color: tint(#E0E6F0, 50%);
+      }
+    }
   }
 }
 
-
-
-
-
-.right-bar{
-  width: 100%;
+.right-bar {
   margin-left: 255px;
-  background-color: skyblue;
+  padding: 63px 0 0 80px;
+
+  > h1 {
+    font-size: 36px;
+    line-height: 1.5;
+    font-weight: 500;
+    color: #555;
+    margin: 0 0 34px 0;
+  }
+
+  > div {
+    margin-top: 50px;
+
+    >h2{
+      font-size: 20px;
+      line-height: 1.5;
+      font-weight: 300;
+      color: @middleFontColor;
+    }
+
+    > ul {
+      margin-top: 20px;
+      > li {
+        font-size: 14px;
+        line-height: 1.5;
+        list-style: inside disc;
+        color: @darkFontColor;
+      }
+    }
+    &:first-child {
+      margin-top: 0;
+    }
+  }
 }

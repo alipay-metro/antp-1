@@ -12,33 +12,265 @@
 .nav-link {
   width: 144px;
   float: left;
-  background-color: pink;
-  height: 100%;
+  height: 70px;
+  text-align: center;
+}
+.nav-link > a,
+.nav-link > span {
+  width: 144px;
+  height: 70px;
+  display: inline-block;
+  color: #999999;
+  line-height: 70px;
+}
+.nav-link > a:hover,
+.nav-link > span:hover {
+  color: #fe7f6b;
+}
+.nav-link > a:active,
+.nav-link > span:active {
+  color: #f15a43;
+}
+.dropdown {
+  width: 112px;
+  height: 102px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 75px;
+  right: 15px;
+  z-index: 9999;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+}
+.dropdown > a {
+  display: inline-block;
+  width: 104px;
+  height: 18px;
+  padding: 8px 0 8px 8px;
+  color: #666666;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.dropdown > a:hover {
+  background-color: #ffbfb5;
+}
+.dropdown > a:first-child {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+.dropdown > a:last-child {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.dropdown.open {
+  opacity: 1;
+  height: 102px;
+  transition: all 0.3s ease-in-out;
+}
+.dropdown.close {
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  transition: all 0.3s ease-in-out;
+}
+@keyframes keyFrame12 {
+  0% {
+    left: 0;
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(1.5);
+  }
+  100% {
+    left: 144px;
+    transform: scaleX(1);
+  }
+}
+@keyframes keyFrame13 {
+  0% {
+    left: 0;
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(2);
+  }
+  100% {
+    left: 288px;
+    transform: scaleX(1);
+  }
+}
+@keyframes keyFrame23 {
+  0% {
+    left: 144px;
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(1.5);
+  }
+  100% {
+    left: 288px;
+    transform: scaleX(1);
+  }
+}
+@keyframes keyFrame21 {
+  0% {
+    left: 144px;
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(1.5);
+  }
+  100% {
+    left: 0;
+    transform: scaleX(1);
+  }
+}
+@keyframes keyFrame32 {
+  0% {
+    left: 288px;
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(1.5);
+  }
+  100% {
+    left: 144px;
+    transform: scaleX(1);
+  }
+}
+@keyframes keyFrame31 {
+  0% {
+    left: 288px;
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(2);
+  }
+  100% {
+    left: 0;
+    transform: scaleX(1);
+  }
+}
+@-webkit-keyframes keyFrame12 {
+  0% {
+    left: 0;
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(1.5);
+  }
+  100% {
+    left: 144px;
+    transform: scaleX(1);
+  }
+}
+@-webkit-keyframes keyFrame13 {
+  0% {
+    left: 0;
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(2);
+  }
+  100% {
+    left: 288px;
+    transform: scaleX(1);
+  }
+}
+@-webkit-keyframes keyFrame23 {
+  0% {
+    left: 144px;
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(1.5);
+  }
+  100% {
+    left: 288px;
+    transform: scaleX(1);
+  }
+}
+@-webkit-keyframes keyFrame21 {
+  0% {
+    left: 144px;
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(1.5);
+  }
+  100% {
+    left: 0;
+    transform: scaleX(1);
+  }
+}
+@-webkit-keyframes keyFrame32 {
+  0% {
+    left: 288px;
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(1.5);
+  }
+  100% {
+    left: 144px;
+    transform: scaleX(1);
+  }
+}
+@-webkit-keyframes keyFrame31 {
+  0% {
+    left: 288px;
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(2);
+  }
+  100% {
+    left: 0;
+    transform: scaleX(1);
+  }
 }
 .slide {
-  /*height: 2px;*/
-  /*width: 144px;*/
-  /*position: absolute;*/
-  /*bottom: 0;*/
-  /*left: 10px;*/
-  /*background-color: @primaryColor;*/
-  /*transform: translateX(200%);*/
-  /*transition: transform .3s ease-in-out;*/
-  z-index: 1;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  box-sizing: border-box;
   height: 2px;
+  width: 144px;
+  position: absolute;
+  bottom: 0;
   background-color: #fe5f46;
-  transform: scaleX(1);
-  transform-origin: 0 0;
 }
-.slide-transition-forward {
-  transition: right 0.3s ease-in-out, left 0.3s ease-in-out 0.09s;
+.slide.move12 {
+  -webkit-animation: keyFrame12 0.3s ease-out;
+  -webkit-animation-fill-mode: forwards;
+  animation: keyFrame12 0.3s ease-out;
+  animation-fill-mode: forwards;
 }
-.slide--transition-backward {
-  transition: right 0.3s ease-in-out 0.09s, left 0.3s ease-in-out;
+.slide.move13 {
+  -webkit-animation: keyFrame13 0.3s ease-out;
+  -webkit-animation-fill-mode: forwards;
+  animation: keyFrame13 0.3s ease-out;
+  animation-fill-mode: forwards;
+}
+.slide.move23 {
+  -webkit-animation: keyFrame23 0.3s ease-out;
+  -webkit-animation-fill-mode: forwards;
+  animation: keyFrame23 0.3s ease-out;
+  animation-fill-mode: forwards;
+}
+.slide.move21 {
+  -webkit-animation: keyFrame21 0.3s ease-out;
+  -webkit-animation-fill-mode: forwards;
+  animation: keyFrame21 0.3s ease-out;
+  animation-fill-mode: forwards;
+}
+.slide.move32 {
+  -webkit-animation: keyFrame32 0.3s ease-out;
+  -webkit-animation-fill-mode: forwards;
+  animation: keyFrame32 0.3s ease-out;
+  animation-fill-mode: forwards;
+}
+.slide.move31 {
+  -webkit-animation: keyFrame31 0.3s ease-out;
+  -webkit-animation-fill-mode: forwards;
+  animation: keyFrame31 0.3s ease-out;
+  animation-fill-mode: forwards;
 }
 /*大图*/
 #jumbotron {
@@ -81,8 +313,8 @@
 .apply-btn:hover {
   background-color: #fe7f6b;
 }
-.apply-btn.active {
-  background-color: shabe(#fe5f46, 65%);
+.apply-btn:active {
+  background-color: #f15a43;
 }
 .nums {
   margin-top: 38px;
@@ -300,6 +532,6 @@ td {
 .bottom-apply-btn:hover {
   background-color: #fe7f6b;
 }
-.bottom-apply-btn.active {
-  background-color: shabe(#fe5f46, 65%);
+.bottom-apply-btn:active {
+  background-color: #f15a43;
 }

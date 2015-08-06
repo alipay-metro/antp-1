@@ -15,11 +15,11 @@
     <img src="/img/logo.svg" alt="ANTP"/>
   </a>
   <p class="header-nav">
-    <a href="#">首页</a>
-    <a class="active" href="#">课程介绍</a>
+    <a href="/">首页</a>
+    <a class="active" href="/html/course-base.html">课程介绍</a>
     <a href="#">健康度</a>
     <a href="#">公开课</a>
-    <a href="#">关于我们</a>
+    <a href="/html/about.html">关于我们</a>
   </p>
 </div>
 
@@ -28,18 +28,29 @@
 
   <!--三类课程导航-->
   <div id="nav">
-    <div class="nav-link"></div>
-    <div class="nav-link"></div>
-    <div class="nav-link"></div>
-    <div class="slide slide-transition-forward"></div>
+    <div class="nav-link">
+      <a href="/html/course-base.html">基础</a>
+    </div>
+    <div class="nav-link">
+      <a href="/html/course-advance.html">进阶</a>
+    </div>
+    <div class="nav-link">
+      <span>选修</span>
+    </div>
+    <div class="slide"></div>
+    <div class="dropdown close">
+      <a href="/html/course-elective-bui.html">BUI课程</a>
+      <a href="/html/course-elective-chair.html">Chair课程</a>
+      <a href="/html/course-elective-flamingwater.html">火烧云课程</a>
+    </div>
   </div>
 
   <!--巨幕-->
   <div id="jumbotron">
     <div class="jumbotron">
-      <h2>选修课程系列</h2>
+      <h2>基础课程系列</h2>
       <p>一个针对新手程序员定制的培训计划,来一次改变，就现在。</p>
-      <img src="/img/xuanxiu-orange3.svg" alt="ANTP" class="banner"/>
+      <img src="/img/xuanxiu-orange1.svg" alt="ANTP" class="banner"/>
       <button class="apply-btn">点击报名</button>
       <div class="nums">
         <div>
@@ -186,6 +197,9 @@
     </div>
   </div>
 </div>
+
+<!--标记当前页面，用于判定导航-->
+<input value="1" type="hidden"/>
 
 <script src="https://a.alipayobjects.com/??jquery/jquery/1.11.1/jquery.js"></script>
 <script src="/js/course.js"></script>
