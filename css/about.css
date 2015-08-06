@@ -20,14 +20,14 @@
   width: 163px;
   height: 48px;
   padding-left: 90px;
-  border-left: 2px solid #E0E6F0;
+  border-left: 2px solid #e0e6f0;
   font-size: 14px;
   line-height: 48px;
   cursor: pointer;
 }
 .left-bar > p.active {
   color: #666666;
-  background-color: #E0E6F0;
+  background-color: #e0e6f0;
   border-left: 2px solid #fe5f46;
 }
 .left-bar > p:hover:not(.active) {

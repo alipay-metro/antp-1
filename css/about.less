@@ -5,6 +5,7 @@
 @middleFontColor: #666;
 @lineColr: #3D414D;
 @tableColor: #F0F1F5;
+@aboutColor: #E0E6F0;
 
 #main {
   width: 100%;
@@ -30,20 +31,20 @@
     width: 163px;
     height: 48px;
     padding-left: 90px;
-    border-left: 2px solid #E0E6F0;
+    border-left: 2px solid @aboutColor;
     font-size: 14px;
     line-height: 48px;
     cursor: pointer;
 
     &.active {
       color: @middleFontColor;
-      background-color: #E0E6F0;
+      background-color: @aboutColor;
       border-left: 2px solid @primaryColor;
     }
     &:hover {
-      &:not(.active){
+      &:not(.active) {
         color: tint(@darkFontColor, 20%);
-        background-color: tint(#E0E6F0, 50%);
+        background-color: tint(@aboutColor, 50%);
       }
     }
   }
@@ -64,7 +65,7 @@
   > div {
     margin-top: 50px;
 
-    >h2{
+    > h2 {
       font-size: 20px;
       line-height: 1.5;
       font-weight: 300;

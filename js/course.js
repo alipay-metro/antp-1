@@ -2,15 +2,15 @@ var start = $('input[type=hidden]').val();
 
 $('.slide').css('left', (start - 1) * 144 + 'px');
 
-$('.nav-link').each(function (index) {
-  $(this).hover(function () {
-    var end = index + 1;
-    if (start !== end) {
-      $('.slide').attr('class', 'slide move' + start + end);
-      start = end;
-    }
-  });
-});
+//$('.nav-link').each(function (index) {
+//  $(this).hover(function () {
+//    var end = index + 1;
+//    if (start !== end) {
+//      $('.slide').attr('class', 'slide move' + start + end);
+//      start = end;
+//    }
+//  });
+//});
 
 var timer1, timer2;
 
