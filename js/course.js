@@ -1,6 +1,6 @@
-var start = $('input[type=hidden]').val();
-
-$('.slide').css('left', (start - 1) * 144 + 'px');
+//var start = $('input[type=hidden]').val();
+//
+//$('.slide').css('left', (start - 1) * 144 + 'px');
 
 //$('.nav-link').each(function (index) {
 //  $(this).hover(function () {

@@ -1,405 +1,347 @@
 /*主体部分*/
 /*课程分类导航*/
 #main {
-    width: 100%;
+  width: 100%;
 }
-
 #nav {
-    width: 432px;
-    height: 70px;
-    margin: 0 auto;
-    position: relative;
+  width: 432px;
+  height: 70px;
+  margin: 0 auto;
+  position: relative;
 }
-
 .nav-link {
-    width: 144px;
-    float: left;
-    height: 70px;
-    text-align: center;
+  width: 144px;
+  float: left;
+  height: 70px;
+  text-align: center;
 }
-
 .nav-link > a,
 .nav-link > span {
-    width: 144px;
-    height: 70px;
-    display: inline-block;
-    color: #999999;
-    line-height: 70px;
+  width: 144px;
+  height: 70px;
+  display: inline-block;
+  color: #999999;
+  line-height: 70px;
 }
-
 .nav-link > a:hover,
 .nav-link > span:hover {
-    color: #fe7f6b;
+  color: #fe7f6b;
 }
-
 .nav-link > a:active,
 .nav-link > span:active {
-    color: #f15a43;
+  color: #f15a43;
 }
-
 .dropdown {
-    width: 112px;
-    height: 102px;
-    background-color: #ffffff;
-    position: absolute;
-    top: 75px;
-    right: 15px;
-    z-index: 9999;
-    border: 1px solid #d9d9d9;
-    border-radius: 6px;
+  width: 112px;
+  height: 102px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 75px;
+  right: 15px;
+  z-index: 9999;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
 }
-
 .dropdown > a {
-    display: inline-block;
-    width: 104px;
-    height: 18px;
-    padding: 8px 0 8px 8px;
-    color: #666666;
-    font-size: 12px;
-    line-height: 1.5;
+  display: inline-block;
+  width: 104px;
+  height: 18px;
+  padding: 8px 0 8px 8px;
+  color: #666666;
+  font-size: 12px;
+  line-height: 1.5;
 }
-
 .dropdown > a:hover {
-    color: #ffffff;
-    background-color: #fe5f46;
+  color: #ffffff;
+  background-color: #fe5f46;
 }
-
 .dropdown > a:first-child {
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
 }
-
 .dropdown > a:last-child {
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
-
 .dropdown.open {
-    opacity: 1;
-    height: 102px;
-    transition: all 0.3s ease-in-out;
+  opacity: 1;
+  height: 102px;
+  transition: all 0.3s ease-in-out;
 }
-
 .dropdown.close {
-    visibility: hidden;
-    opacity: 0;
-    height: 0;
-    transition: all 0.3s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  transition: all 0.3s ease-in-out;
 }
-
 .slide {
-    height: 2px;
-    width: 144px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-color: #fe5f46;
+  height: 2px;
+  width: 144px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #fe5f46;
 }
-
 /*大图*/
 #jumbotron {
-    width: 100%;
-    height: 395px;
-    background-color: #F4F6F8;
+  width: 100%;
+  height: 395px;
+  background-color: #F4F6F8;
 }
-
 .jumbotron {
-    width: 980px;
-    height: 395px;
-    margin: 0 auto;
-    position: relative;
+  width: 980px;
+  height: 395px;
+  margin: 0 auto;
+  position: relative;
 }
-
 .jumbotron > h2 {
-    font-size: 48px;
-    line-height: 48px;
-    font-weight: 300;
-    color: #5B5B5B;
-    display: inline-block;
-    margin-top: 57px;
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: 300;
+  color: #5B5B5B;
+  display: inline-block;
+  margin-top: 57px;
 }
-
 .jumbotron > p {
-    font-size: 14px;
-    color: #999999;
-    margin-top: 20px;
+  font-size: 14px;
+  color: #999999;
+  margin-top: 20px;
 }
-
 .apply-btn {
-    height: 40px;
-    width: 102px;
-    margin-top: 40px;
-    font-size: 18px;
-    color: #ffffff;
-    border-radius: 21px;
-    background-color: #fe5f46;
-    border: 1px solid #DD5D48;
-    text-align: center;
-    line-height: 100%;
-    outline: none;
+  height: 40px;
+  width: 102px;
+  margin-top: 40px;
+  font-size: 18px;
+  color: #ffffff;
+  border-radius: 21px;
+  background-color: #fe5f46;
+  border: 1px solid #DD5D48;
+  text-align: center;
+  line-height: 100%;
+  outline: none;
 }
-
 .apply-btn:hover {
-    background-color: #fe7f6b;
+  background-color: #fe7f6b;
 }
-
 .apply-btn:active {
-    background-color: #f15a43;
+  background-color: #f15a43;
 }
-
 .nums {
-    margin-top: 38px;
+  margin-top: 38px;
 }
-
 .nums > div {
-    display: inline-block;
-    float: left;
-    color: #666666;
+  display: inline-block;
+  float: left;
+  color: #666666;
 }
-
 .nums > div:first-child {
-    margin-right: 104px;
+  margin-right: 104px;
 }
-
 .nums > div > p {
-    font-size: 12px;
-    line-height: 1.6;
-    margin-top: 5px;
+  font-size: 12px;
+  line-height: 1.6;
+  margin-top: 5px;
 }
-
 .nums > div > p:first-child {
-    font-size: 24px;
+  font-size: 24px;
 }
-
 .banner {
-    height: 375px;
-    width: 589px;
-    position: absolute;
-    top: 20px;
-    right: 0;
+  height: 375px;
+  width: 589px;
+  position: absolute;
+  top: 20px;
+  right: 0;
 }
-
 /*课程简介*/
 #introduce {
-    width: 100%;
-    height: 136px;
+  width: 100%;
+  height: 136px;
 }
-
 .introduce {
-    width: 980px;
-    height: 100%;
-    margin: 0 auto;
+  width: 980px;
+  height: 100%;
+  margin: 0 auto;
 }
-
 .introduce > div {
-    width: 220px;
-    height: 52px;
-    margin-left: 33px;
-    padding: 42px 0;
-    float: left;
-    position: relative;
+  width: 220px;
+  height: 52px;
+  margin-left: 33px;
+  padding: 42px 0;
+  float: left;
+  position: relative;
 }
-
 .introduce > div:first-child {
-    margin-left: 0;
+  margin-left: 0;
 }
-
 .introduce > div > div {
-    margin-left: 46px;
+  margin-left: 46px;
 }
-
 .introduce > div > div > p {
-    font-size: 14px;
-    color: #999999;
-    margin-top: 8px;
-    line-height: 22px;
-    font-weight: 100;
+  font-size: 14px;
+  color: #999999;
+  margin-top: 8px;
+  line-height: 22px;
+  font-weight: 100;
 }
-
 .introduce > div > div > p:first-child {
-    font-size: 18px;
-    color: #666666;
-    line-height: 22px;
-    margin: 0;
+  font-size: 18px;
+  color: #666666;
+  line-height: 22px;
+  margin: 0;
 }
-
 .icon {
-    width: 34px;
-    height: 34px;
-    position: absolute;
-    top: 51px;
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  top: 51px;
 }
-
 .icon.bmyq {
-    width: 26px;
-    height: 38px;
-    top: 49px;
+  width: 26px;
+  height: 38px;
+  top: 49px;
 }
-
 .icon.pdbz {
-    width: 27px;
-    height: 32px;
-    top: 52px;
+  width: 27px;
+  height: 32px;
+  top: 52px;
 }
-
 hr {
-    border: none;
-    background-color: #979797;
-    height: 1px;
-    opacity: 0.27;
-    margin: 0;
+  border: none;
+  background-color: #979797;
+  height: 1px;
+  opacity: 0.27;
+  margin: 0;
 }
-
 /*课程安排*/
 .plan-title {
-    font-size: 24px;
-    line-height: 24px;
-    text-align: center;
-    color: #666666;
-    margin: 82px 0 40px 0;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  color: #666666;
+  margin: 82px 0 40px 0;
 }
-
 .plan-title span {
-    color: #fe5f46;
+  color: #fe5f46;
 }
-
 table {
-    border-collapse: separate;
-    width: 978px;
-    margin: 0 auto;
-    border-radius: 4px;
-    border: 1px solid #f0f1f5;
-    text-align: center;
-    overflow: hidden;
+  border-collapse: separate;
+  width: 978px;
+  margin: 0 auto;
+  border-radius: 4px;
+  border: 1px solid #f0f1f5;
+  text-align: center;
+  overflow: hidden;
 }
-
 tr {
-    height: 48px;
-    color: #666666;
-    font-size: 12px;
-    line-height: 48px;
+  height: 48px;
+  color: #666666;
+  font-size: 12px;
+  line-height: 48px;
 }
-
 tr:nth-of-type(odd) {
-    background-color: #f0f1f5;
+  background-color: #f0f1f5;
 }
-
 tr:first-child {
-    background-color: #727580;
-    color: #ffffff;
-    font-size: 14px;
-    line-height: 48px;
-    font-weight: 100;
+  background-color: #727580;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 48px;
+  font-weight: 100;
 }
-
 th,
 td {
-    width: 122px;
+  width: 122px;
 }
-
 /*导师简介*/
 .teacher {
-    width: 980px;
-    height: 257px;
-    margin: 0 auto;
+  width: 980px;
+  height: 257px;
+  margin: 0 auto;
 }
-
 .teacher > div {
-    width: 280px;
-    height: 100%;
-    float: left;
-    margin-left: 70px;
+  width: 280px;
+  height: 100%;
+  float: left;
+  margin-left: 70px;
 }
-
 .teacher > div:first-child {
-    margin-left: 0;
+  margin-left: 0;
 }
-
 .avatar {
-    width: 280px;
-    height: 186px;
+  width: 280px;
+  height: 186px;
 }
-
 .teacher-name {
-    font-size: 14px;
-    color: #666666;
-    line-height: 18px;
-    margin-top: 20px;
-    text-align: center;
+  font-size: 14px;
+  color: #666666;
+  line-height: 18px;
+  margin-top: 20px;
+  text-align: center;
 }
-
 .teacher-introduce {
-    font-size: 12px;
-    color: #999999;
-    line-height: 18px;
-    margin-top: 10px;
-    text-align: center;
+  font-size: 12px;
+  color: #999999;
+  line-height: 18px;
+  margin-top: 10px;
+  text-align: center;
 }
-
 /*图线*/
 .top-point {
-    width: 0;
-    height: 0;
-    margin: 100px auto 0 auto;
-    border: 3px solid #3d414d;
-    border-radius: 3px;
+  width: 0;
+  height: 0;
+  margin: 100px auto 0 auto;
+  border: 3px solid #3d414d;
+  border-radius: 3px;
 }
-
 .gray-line {
-    width: 2px;
-    height: 67px;
-    margin: 0 auto;
-    background-color: #3d414d;
+  width: 2px;
+  height: 67px;
+  margin: 0 auto;
+  background-color: #3d414d;
 }
-
 .white-line {
-    width: 2px;
-    height: 21px;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    margin-left: -1px;
-    background-color: #ffffff;
+  width: 2px;
+  height: 21px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -1px;
+  background-color: #ffffff;
 }
-
 .bottom-point {
-    width: 0;
-    height: 0;
-    position: absolute;
-    top: 21px;
-    left: 50%;
-    margin-left: -3px;
-    border: 3px solid #ffffff;
-    border-radius: 3px;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 21px;
+  left: 50%;
+  margin-left: -3px;
+  border: 3px solid #ffffff;
+  border-radius: 3px;
 }
-
 .bottom-btn {
-    width: 100%;
-    height: 131px;
-    padding-top: 27px;
-    position: relative;
-    background-color: #fe5f46;
+  width: 100%;
+  height: 131px;
+  padding-top: 27px;
+  position: relative;
+  background-color: #fe5f46;
 }
-
 .bottom-apply-btn {
-    height: 42px;
-    width: 122px;
-    display: block;
-    margin: 30px auto 0 auto;
-    font-size: 18px;
-    color: #ffffff;
-    border-radius: 22px;
-    background-color: #fe5f46;
-    border: 1px solid #ffffff;
-    text-align: center;
-    line-height: 100%;
-    outline: none;
+  height: 42px;
+  width: 122px;
+  display: block;
+  margin: 30px auto 0 auto;
+  font-size: 18px;
+  color: #ffffff;
+  border-radius: 22px;
+  background-color: #fe5f46;
+  border: 1px solid #ffffff;
+  text-align: center;
+  line-height: 100%;
+  outline: none;
 }
-
 .bottom-apply-btn:hover {
-    background-color: #fe7f6b;
+  background-color: #fe7f6b;
 }
-
 .bottom-apply-btn:active {
-    background-color: #f15a43;
+  background-color: #f15a43;
 }
